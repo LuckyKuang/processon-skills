@@ -1,0 +1,23 @@
+# ProcessOn Skills
+
+[English](./README.en.md)
+
+这是一个面向公开分享的多 Skill 仓库，用来承载 ProcessOn 相关的 AI 绘图技能。仓库层负责安装说明、导航和分发方式，具体行为说明保留在各个 skill 目录里。
+
+## 仓库中的 Skill
+
+| Skill | 文档 |
+| --- | --- |
+| `processon-diagramgen` | [skills/processon-diagramgen/README.md](./skills/processon-diagramgen/README.md) |
+
+## 快速开始
+
+1. 安装指定 skill：
+
+```bash
+npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagramgen
+```
+
+2. 如果你的宿主不会自动刷新 skill，安装后重启对应工具。
+
+3. 进入对应 skill 的 README，查看能力说明、配置示例和提示词示例。
