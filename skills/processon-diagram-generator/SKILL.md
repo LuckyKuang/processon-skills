@@ -56,7 +56,7 @@ dependencies:
 
 ## 执行顺序
 
-1. 先在聊天里说明正在使用 `processon-diagrams` 技能处理当前请求。
+1. 先在聊天里说明正在使用 `processon-diagram-generator` 技能处理当前请求。
 2. 识别图形类型，提取关键实体、动作、判断条件，构建优化后的 Prompt。
 3. 优先使用名为 `processon-diagrams` 的 MCP 服务生成图形。
 4. 如果 MCP 不可用、不可达或未安装，先简短告知用户，再回退到本地脚本 `scripts/processon_api_client.py`。
