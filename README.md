@@ -8,14 +8,14 @@
 
 | Skill | 文档 |
 | --- | --- |
-| `processon-diagramgen` | [skills/processon-diagramgen/README.md](./skills/processon-diagramgen/README.md) |
+| `processon-diagram-generator` | [skills/processon-diagram-generator/README.md](./skills/processon-diagram-generator/README.md) |
 
 ## 快速开始
 
 1. 安装指定 skill：
 
 ```bash
-npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagramgen
+npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagram-generator
 ```
 
 2. 如果你的宿主不会自动刷新 skill，安装后重启对应工具。

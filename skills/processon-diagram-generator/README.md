@@ -1,11 +1,11 @@
-# processon-diagramgen
+# processon-diagram-generator
 
 用 ProcessOn 生成专业、可继续编辑的图形，支持自然语言、代码上下文。
 
 ## 安装
 
 ```bash
-npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagramgen
+npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagram-generator
 ```
 
 如果宿主不会自动刷新 skill，安装后请重启对应工具。
@@ -74,5 +74,5 @@ https://smart.processon.com/render-dsl
 如果你想在本地迭代这个 skill，而不是从 GitHub 安装，可以把 skill 目录放到本地 skills 目录，例如：
 
 ```text
-~/.codex/skills/processon-diagramgen
+~/.codex/skills/processon-diagram-generator
 ```

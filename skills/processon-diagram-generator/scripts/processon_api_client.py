@@ -204,6 +204,8 @@ def generate_diagram(prompt, title=None):
             content_lines.append(normalized_line)
         if content_lines:
             first_line = content_lines[0].lower()
+            if first_line.startswith("smart "):
+                return True
             if first_line.startswith(mermaid_block_markers):
                 return True
         return False
@@ -272,6 +274,8 @@ def generate_diagram(prompt, title=None):
             if normalized:
                 first_line = normalized.lower()
                 break
+        if first_line.startswith("smart "):
+            return "text"
         if first_line.startswith((
             "graph ",
             "flowchart ",
@@ -361,8 +365,22 @@ def generate_diagram(prompt, title=None):
         json_payload = json.dumps(payload, ensure_ascii=False).encode('utf-8')
         req = urllib.request.Request(API_URL, data=json_payload, headers=headers, method='POST')
         with urllib.request.urlopen(req, timeout=180) as response:
+            status_code = getattr(response, "status", "unknown")
+            content_type = response.headers.get("Content-Type", "unknown")
             response_data = response.read().decode('utf-8')
-            return json.loads(response_data)
+            if not response_data.strip():
+                raise ValueError(
+                    f"Empty response body from ProcessOn API "
+                    f"(status={status_code}, content_type={content_type})"
+                )
+            try:
+                return json.loads(response_data)
+            except json.JSONDecodeError as e:
+                snippet = response_data[:500]
+                raise ValueError(
+                    f"Invalid JSON response from ProcessOn API "
+                    f"(status={status_code}, content_type={content_type}, body_prefix={snippet!r})"
+                ) from e
 
     def build_credential_metadata():
         macos_command = 'export PROCESSON_API_KEY="<your-processon-api-key>"'

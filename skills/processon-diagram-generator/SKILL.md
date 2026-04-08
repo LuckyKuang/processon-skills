@@ -1,5 +1,5 @@
 ---
-name: "processon-diagramgen"
+name: "processon-diagram-generator"
 description: "帮助用户生成专业、美观、可继续编辑的图形，包括流程图、时序图、架构图、网络拓扑图、ER 图、组织结构图、时间轴、信息图、金字塔图，以及草图重绘。当用户提到“生成图”、“画图”、“流程图”、“架构分析”、“拓扑图”、“重绘草图”等需求时应触发本技能。Also use this skill when the user asks to draw, generate, create, visualize, or redraw a diagram such as a flowchart, sequence diagram, architecture diagram, network topology, ER diagram, org chart, timeline, infographic, pyramid chart, or sketch-to-diagram. Optimize final chat output for third-party hosts so image links and DSL text remain visible."
 icon: "📊"
 author: "ProcessOn"

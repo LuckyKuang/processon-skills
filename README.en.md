@@ -8,14 +8,14 @@ This is a public multi-skill repository for ProcessOn-related AI diagram skills.
 
 | Skill | Docs |
 | --- | --- |
-| `processon-diagramgen` | [skills/processon-diagramgen/README.md](./skills/processon-diagramgen/README.md) |
+| `processon-diagram-generator` | [skills/processon-diagram-generator/README.md](./skills/processon-diagram-generator/README.md) |
 
 ## Quick Start
 
 1. Install a specific skill:
 
 ```bash
-npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagramgen
+npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagram-generator
 ```
 
 2. Restart your host if it does not refresh installed skills automatically.
@@ -29,10 +29,10 @@ npx skills add https://github.com/processonai/processon-skills.git --skill proce
 
 ## Install Example
 
-Install `processon-diagramgen`:
+Install `processon-diagram-generator`:
 
 ```bash
-npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagramgen
+npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagram-generator
 ```
 
 ## Repository Layout
@@ -44,7 +44,7 @@ processon-skills/
   LICENSE
   .gitignore
   skills/
-    processon-diagramgen/
+    processon-diagram-generator/
       SKILL.md
       README.md
       scripts/
@@ -55,8 +55,8 @@ processon-skills/
 
 - Skill discovery depends on each skill directory containing a valid `SKILL.md`.
 - Keep public interface names stable:
-  - skill name: `processon-diagramgen`
+  - skill name: `processon-diagram-generator`
   - MCP server name: `processon-diagrams`
   - env var: `PROCESSON_API_KEY`
 
-For usage details, configuration examples, and host-compatibility guidance, see [skills/processon-diagramgen/README.md](./skills/processon-diagramgen/README.md).
+For usage details, configuration examples, and host-compatibility guidance, see [skills/processon-diagram-generator/README.md](./skills/processon-diagram-generator/README.md).
