@@ -219,7 +219,10 @@ def generate_diagram(prompt, title=None):
             text = item.get("text")
             if text is None:
                 text = item.get("data")
+            data_type = str(item.get("dataType", "")).lower()
             mime_type = str(item.get("mimeType", "")).lower()
+            if data_type == "dsl":
+                return True
             if mime_type in (
                 "application/json",
                 "application/dsl+json",
@@ -247,8 +250,9 @@ def generate_diagram(prompt, title=None):
             stripped = text.strip()
             if not stripped:
                 continue
+            data_type = str(item.get("dataType", "")).lower()
             mime_type = str(item.get("mimeType", "")).lower()
-            is_dsl = mime_type in (
+            is_dsl = data_type == "dsl" or mime_type in (
                 "application/json",
                 "application/dsl+json",
                 "application/vnd.processon.dsl+json",
