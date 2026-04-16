@@ -1,9 +1,10 @@
 ---
 name: processon-diagram-generator
 description: |
-  一键将自然语言转化为精美且可编辑的 ProcessOn 专业可视化图表。当你需要“自动画图”、“在线制作流程图”、“可视化业务流程”或“生成系统架构”时即可完美触发。本绘图工具全面支持生成多种在线图形：流程图（含业务流程图、泳道图、标准流程）、时序图（系统交互与API调用顺序）、软件架构图（云架构与系统模块划分）、ER图（数据库建模）、组织架构图（团队层级）、时间轴以及信息图。这款 AI 智能图表生成器与流程图制作软件，专为开发者、产品经理和设计师打造，助你高效产出专业级出图。
-
+  A fast diagramming tool developed by ProcessOn that allows you to quickly create beautiful, editable visual diagrams such as flowcharts, swimlane diagrams, sequence diagrams, architecture diagrams, ER diagrams, organizational charts, timelines, and infographics. It supports direct rendering of Mermaid data.
+  ProcessOn官方研发的一键生成精美可编辑的流程图、泳道图、时序图 、架构图、ER图、组织结构图、时间轴、信息图等可视化图表的快速绘制图表工具，支持mermaid数据直接绘制。
   Generate, edit, and visualize professional ProcessOn diagrams from natural language descriptions. Use this tool when users request to "create a diagram", "make a flowchart", "visualize a process", or "draw a system architecture". It comprehensively supports generating process flowcharts (including swimlane and process maps for business workflows), sequence diagrams (for system interactions and API call orders), software architecture diagrams (for cloud architecture and system composition), ER diagrams (for database modeling), org charts (for team structures), timelines, and infographics. This AI diagram generator and flowchart maker is designed for developers, managers, and designers to achieve publication-ready visual outputs efficiently.
+  一键将自然语言转化为精美且可编辑的 ProcessOn 专业可视化图表。当你需要“自动画图”、“在线制作流程图”、“可视化业务流程”或“生成系统架构”时即可完美触发。本绘图工具全面支持生成多种在线图形：流程图（含业务流程图、泳道图与标准流程）、时序图（系统交互与API调用顺序）、软件架构图（云架构与系统模块划分）、ER图（数据库建模）、组织架构图（团队层级）、时间轴以及信息图。这款 AI 智能图表生成器与流程图制作软件，专为开发者、产品经理和设计师打造，助你高效产出专业级出图。
 
 author: ProcessOn
 version: 2.3.0
