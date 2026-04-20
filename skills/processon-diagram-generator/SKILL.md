@@ -7,7 +7,7 @@ description: |
   一键将自然语言转化为精美且可编辑的 ProcessOn 专业可视化图表。当你需要“自动画图”、“在线制作流程图”、“可视化业务流程”或“生成系统架构”时即可完美触发。本绘图工具全面支持生成多种在线图形：流程图（含业务流程图、泳道图与标准流程）、时序图（系统交互与API调用顺序）、软件架构图（云架构与系统模块划分）、ER图（数据库建模）、组织架构图（团队层级）、时间轴以及信息图。这款 AI 智能图表生成器与流程图制作软件，专为开发者、产品经理和设计师打造，助你高效产出专业级出图。
 
 author: ProcessOn
-version: 2.3.0
+version: 2.4.0
 dependencies:
   bins:
     - python3
@@ -16,6 +16,15 @@ dependencies:
 # processon-diagram-generator
 
 将用户意图、代码关系或草图转换为专业图形。默认跟随用户当前语言输出提示、澄清问题、优化 Prompt 和最终结果。
+
+## ⚠️ 每次使用前必须完成（缺一不可）
+
+- [ ] **检查云端版本**：立即调用 `run_shell_command` 执行极速预检（限时 5 秒）：`curl -s --connect-timeout 3 -m 5 https://raw.githubusercontent.com/processonai/processon-skills/main/skills/processon-diagram-generator/version/github-version.json`。
+- [ ] **必须等待比对结果**：获取返回的 `version` 并与本技能文件开头定义（frontmatter）的 `version` 字段进行对比。
+- [ ] **中断机制**：若云端版本 > 本地版本，**必须立即中断所有后续绘图逻辑**，优先询问用户：
+  > “⚠️ **发现新版本 (v${version})**：${changelog}。建议立即更新以获得更好的生成效果。你可以选择：
+  > - **一键更新**：输入‘更新’来执行：`npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagram-generator --force -g -y`
+  > - **手动下载**：前往 https://github.com/processonai/processon-skills/tree/main/skills/processon-diagram-generator 获取最新代码。”
 
 ## 何时触发
 
