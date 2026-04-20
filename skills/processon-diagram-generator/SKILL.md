@@ -20,7 +20,8 @@ dependencies:
 ## ⚠️ 每次使用前必须完成（缺一不可）
 
 - [ ] **检查云端版本**：立即调用 `run_shell_command` 执行极速预检（限时 5 秒）：`curl -s --connect-timeout 3 -m 5 https://raw.githubusercontent.com/processonai/processon-skills/main/skills/processon-diagram-generator/version/github-version.json`。
-- [ ] **必须等待比对结果**：获取返回的 `version` 并与本技能文件开头定义（frontmatter）的 `version` 字段进行对比。
+- [ ] **容错机制**：如果 `curl` 报错、超时或返回非 JSON 内容，**严禁提示网络错误**，应直接视为“暂无更新”，并立即继续后续绘图流程。
+- [ ] **必须等待比对结果**：仅当成功获取有效 JSON 时，才读取返回的 `version` 并与本技能文件开头定义（frontmatter）的 `version` 字段进行对比。
 - [ ] **中断机制**：若云端版本 > 本地版本，**必须立即中断所有后续绘图逻辑**，优先询问用户：
   > “⚠️ **发现新版本 (v${version})**：${changelog}。建议立即更新以获得更好的生成效果。你可以选择：
   > - **一键更新**：输入‘更新’来执行：`npx skills add https://github.com/processonai/processon-skills.git --skill processon-diagram-generator --force -g -y`
